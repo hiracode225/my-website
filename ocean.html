@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ocean Therapy — Find Your Calm</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f5f7f5;
+    color:#173b47;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    transition:.4s;
+}
+
+header.scrolled{
+    background:rgba(8,43,55,.92);
+    backdrop-filter:blur(18px);
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    padding:22px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    font-family:"Playfair Display",serif;
+    font-size:27px;
+    color:white;
+    letter-spacing:.5px;
+}
+
+.brand span{
+    color:#b9ded9;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    color:white;
+    font-size:14px;
+    position:relative;
+}
+
+.nav-links a:after{
+    content:"";
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#b9ded9;
+    transition:.3s;
+}
+
+.nav-links a:hover:after{
+    width:100%;
+}
+
+.nav-btn{
+    padding:11px 20px;
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:30px;
+}
+
+.nav-btn:hover{
+    background:white;
+    color:#123b49;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,
+    rgba(3,31,42,.78),
+    rgba(3,31,42,.34),
+    rgba(3,31,42,.12)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1250px;
+    width:100%;
+    margin:auto;
+    padding:150px 30px 100px;
+    color:white;
+}
+
+.eyebrow{
+    color:#c3e4df;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(55px,8vw,105px);
+    line-height:.98;
+    font-weight:600;
+    max-width:850px;
+}
+
+.hero-description{
+    max-width:570px;
+    font-size:17px;
+    line-height:1.8;
+    margin:28px 0 35px;
+    color:#edf8f7;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 27px;
+    border-radius:50px;
+    border:1px solid transparent;
+    background:#b9ded9;
+    color:#123d4b;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.btn-outline{
+    background:rgba(255,255,255,.08);
+    color:white;
+    border-color:rgba(255,255,255,.6);
+}
+
+.scroll-text{
+    position:absolute;
+    bottom:35px;
+    left:30px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#dceceb;
+}
+
+.scroll-line{
+    width:45px;
+    height:1px;
+    background:#dceceb;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.section{
+    max-width:1250px;
+    margin:auto;
+    padding:110px 30px;
+}
+
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.image-frame{
+    position:relative;
+}
+
+.image-frame img{
+    height:600px;
+    object-fit:cover;
+    border-radius:240px 240px 25px 25px;
+}
+
+.image-tag{
+    position:absolute;
+    right:-25px;
+    bottom:35px;
+    background:white;
+    padding:18px 22px;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(15,50,60,.15);
+}
+
+.image-tag strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+}
+
+.image-tag span{
+    color:#718286;
+    font-size:12px;
+}
+
+.label{
+    color:#6b9997;
+    letter-spacing:3px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.intro h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,62px);
+    line-height:1.08;
+    margin:17px 0 25px;
+}
+
+.intro p{
+    color:#65777b;
+    margin-bottom:17px;
+}
+
+.check-list{
+    margin:30px 0;
+    list-style:none;
+}
+
+.check-list li{
+    margin:13px 0;
+    color:#3d5d64;
+}
+
+.check-list li:before{
+    content:"✓";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#d9ece9;
+    color:#3b7776;
+    margin-right:10px;
+    font-size:12px;
+}
+
+
+/* =====================================================
+   DARK FEATURE SECTION
+===================================================== */
+
+.dark-section{
+    background:#0b3948;
+    color:white;
+    max-width:none;
+}
+
+.dark-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:110px 30px;
+}
+
+.dark-heading{
+    max-width:700px;
+    margin-bottom:55px;
+}
+
+.dark-heading .label{
+    color:#9bcac5;
+}
+
+.dark-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,60px);
+    line-height:1.1;
+    margin:15px 0;
+}
+
+.dark-heading p{
+    color:#bdd0d2;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.experience{
+    position:relative;
+    min-height:390px;
+    overflow:hidden;
+    border-radius:18px;
+    cursor:pointer;
+}
+
+.experience img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.experience:hover img{
+    transform:scale(1.08);
+}
+
+.experience:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 30%,rgba(0,20,28,.9));
+}
+
+.experience-content{
+    position:absolute;
+    z-index:2;
+    left:25px;
+    right:25px;
+    bottom:25px;
+}
+
+.experience-number{
+    color:#b9ded9;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.experience h3{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    margin:5px 0;
+}
+
+.experience p{
+    color:#d7e6e5;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+    max-width:none;
+    background:#dcecea;
+}
+
+.stats-inner{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    text-align:center;
+    gap:30px;
+}
+
+.stat h3{
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    color:#225b66;
+}
+
+.stat p{
+    color:#617579;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   WELLNESS
+===================================================== */
+
+.wellness{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:80px;
+    align-items:center;
+}
+
+.wellness-image{
+    height:650px;
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.wellness-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.wellness h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,60px);
+    line-height:1.1;
+    margin:15px 0 25px;
+}
+
+.wellness-description{
+    color:#68797d;
+    margin-bottom:30px;
+}
+
+.steps{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.step{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+}
+
+.step-number{
+    min-width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#dcecea;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#397276;
+    font-weight:bold;
+}
+
+.step h4{
+    margin-bottom:3px;
+}
+
+.step p{
+    color:#708084;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section{
+    background:#f0f4f2;
+    max-width:none;
+}
+
+.gallery-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.gallery-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.gallery-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,5vw,60px);
+    margin:12px 0;
+}
+
+.gallery-heading p:last-child{
+    color:#718083;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    grid-template-rows:260px 260px;
+    gap:15px;
+}
+
+.gallery img{
+    height:100%;
+    object-fit:cover;
+    border-radius:14px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+.gallery-main{
+    grid-row:span 2;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote{
+    max-width:none;
+    min-height:540px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(4,39,50,.65),rgba(4,39,50,.65)),
+    url("https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=2200&q=90");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.quote-mark{
+    font-family:Georgia,serif;
+    font-size:90px;
+    height:70px;
+}
+
+.quote h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(35px,5vw,62px);
+    line-height:1.2;
+    max-width:850px;
+}
+
+.quote p{
+    margin-top:20px;
+    color:#c3e2df;
+}
+
+
+/* =====================================================
+   TESTIMONIALS
+===================================================== */
+
+.testimonials{
+    background:#f7f8f6;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.testimonial{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid #e2e7e4;
+}
+
+.stars{
+    color:#679c99;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.testimonial p{
+    color:#627478;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.person{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-top:25px;
+}
+
+.avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#dcecea;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.person strong{
+    display:block;
+    font-size:13px;
+}
+
+.person span{
+    font-size:11px;
+    color:#829093;
+}
+
+
+/* =====================================================
+   BOOKING CTA
+===================================================== */
+
+.booking-cta{
+    max-width:none;
+    background:#cfe4e1;
+    text-align:center;
+}
+
+.booking-cta-inner{
+    max-width:750px;
+    margin:auto;
+}
+
+.booking-cta h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(42px,6vw,68px);
+    line-height:1.05;
+    margin:15px 0 20px;
+}
+
+.booking-cta p{
+    color:#587176;
+    margin-bottom:30px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#082f3d;
+    color:white;
+    padding:65px 30px 25px;
+    text-align:center;
+}
+
+.footer-brand{
+    font-family:"Playfair Display",serif;
+    font-size:32px;
+}
+
+.footer-brand span{
+    color:#b9ded9;
+}
+
+.footer-text{
+    color:#b5c9cc;
+    margin:10px auto 25px;
+    font-size:13px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.footer-links a{
+    color:#d9e8e8;
+    font-size:13px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:22px;
+    color:#89a4a8;
+    font-size:11px;
+}
+
+
+/* =====================================================
+   BOOKING MODAL
+===================================================== */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,20,28,.7);
+    backdrop-filter:blur(8px);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    background:#fff;
+    width:100%;
+    max-width:550px;
+    max-height:90vh;
+    overflow-y:auto;
+    border-radius:22px;
+    padding:38px;
+    position:relative;
+    animation:modalIn .35s ease;
+}
+
+@keyframes modalIn{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:18px;
+    border:0;
+    background:#edf3f1;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.modal-box h2{
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    margin-bottom:5px;
+}
+
+.modal-box > p{
+    color:#758286;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid #dce3e0;
+    background:#fafcfb;
+    padding:13px 14px;
+    border-radius:9px;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#6d9e9c;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.form-submit{
+    width:100%;
+    margin-top:5px;
+}
+
+.success{
+    display:none;
+    margin-top:15px;
+    background:#dcefe8;
+    color:#2d6555;
+    padding:13px;
+    border-radius:9px;
+    text-align:center;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq-section{
+    max-width:850px;
+}
+
+.faq-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.faq-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:50px;
+}
+
+.faq{
+    border-bottom:1px solid #dfe5e2;
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:none;
+    padding:22px 5px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    color:#244c57;
+    font-weight:700;
+    text-align:left;
+}
+
+.faq-question span{
+    font-size:22px;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.faq-answer p{
+    color:#708084;
+    font-size:14px;
+    padding:0 5px 20px;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+    .experience-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro,
+    .wellness{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .stats-inner{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:18px 20px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        width:220px;
+        padding:22px;
+        background:#08313f;
+        border-radius:15px;
+        flex-direction:column;
+        gap:20px;
+        box-shadow:0 20px 40px rgba(0,0,0,.25);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-btn{
+        display:none;
+    }
+
+    .hero-content{
+        padding:130px 20px 100px;
+    }
+
+    .hero h1{
+        font-size:56px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .scroll-text{
+        left:20px;
+    }
+
+    .section{
+        padding:75px 20px;
+    }
+
+    .intro{
+        gap:45px;
+    }
+
+    .image-frame img{
+        height:450px;
+    }
+
+    .image-tag{
+        right:10px;
+        bottom:20px;
+    }
+
+    .dark-inner{
+        padding:75px 20px;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .experience{
+        min-height:350px;
+    }
+
+    .stats-inner{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .wellness-image{
+        height:450px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        grid-template-rows:300px 220px 220px 220px;
+    }
+
+    .gallery-main{
+        grid-row:auto;
+    }
+
+    .quote{
+        min-height:450px;
+        padding:40px 20px;
+        background-attachment:scroll;
+    }
+
+    .quote h2{
+        font-size:35px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .modal-box{
+        padding:28px 22px;
+    }
+
+    .faq-heading h2{
+        font-size:40px;
+    }
+
+    .footer-links{
+        gap:18px;
+        flex-wrap:wrap;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header id="header">
+
+<nav class="navbar">
+
+<a href="#" class="brand">
+Ocean <span>Therapy</span>
+</a>
+
+<button class="menu-btn" id="menuBtn">☰</button>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#experiences">Experiences</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+<li>
+<a href="#contact" class="nav-btn">Book Session</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content reveal">
+
+<p class="eyebrow">
+BREATHE • RELAX • RECONNECT
+</p>
+
+<h1>
+Find Your Calm<br>
+By The Sea
+</h1>
+
+<p class="hero-description">
+Step away from the noise of everyday life and discover
+a slower, softer way to reconnect with yourself through
+the peaceful rhythm of the ocean.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#experiences" class="btn">
+Explore Experiences →
+</a>
+
+<button class="btn btn-outline" onclick="openModal()">
+Book A Session
+</button>
+
+</div>
+
+</div>
+
+<div class="scroll-text">
+<span class="scroll-line"></span>
+SCROLL TO EXPLORE
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+<div class="intro">
+
+<div class="image-frame reveal">
+
+<img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=90" alt="Peaceful ocean">
+
+<div class="image-tag">
+<strong>Slow Down.</strong>
+<span>Let nature lead the way.</span>
+</div>
+
+</div>
+
+
+<div class="reveal">
+
+<p class="label">
+THE OCEAN THERAPY PHILOSOPHY
+</p>
+
+<h2>
+A little more peace.<br>
+A little less noise.
+</h2>
+
+<p>
+Ocean Therapy is a wellness concept inspired by the
+calming presence of the sea. It is about creating space
+to breathe, reflect and simply be present.
+</p>
+
+<p>
+Whether you are watching the sunset, walking barefoot
+along the shore or listening to the waves, every moment
+is an invitation to slow down.
+</p>
+
+<ul class="check-list">
+
+<li>Mindful moments beside the ocean</li>
+
+<li>Slow and peaceful beach experiences</li>
+
+<li>Nature-inspired relaxation</li>
+
+<li>Time to disconnect and reconnect</li>
+
+</ul>
+
+<a href="#experiences" class="btn">
+Discover Your Experience
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCES
+===================================================== -->
+
+<section class="dark-section" id="experiences">
+
+<div class="dark-inner">
+
+<div class="dark-heading reveal">
+
+<p class="label">
+YOUR OCEAN MOMENT
+</p>
+
+<h2>
+Choose the experience<br>
+that feels right for you.
+</h2>
+
+<p>
+There is no perfect way to relax. Choose a moment,
+follow the rhythm of the sea and let yourself slow down.
+</p>
+
+</div>
+
+
+<div class="experience-grid">
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&w=1000&q=90" alt="Beach meditation">
+
+<div class="experience-content">
+
+<span class="experience-number">01 / MINDFULNESS</span>
+
+<h3>Beach Meditation</h3>
+
+<p>
+Quiet your thoughts with gentle breathing
+while listening to the ocean waves.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1000&q=90" alt="Ocean yoga">
+
+<div class="experience-content">
+
+<span class="experience-number">02 / MOVEMENT</span>
+
+<h3>Ocean Yoga</h3>
+
+<p>
+Gentle movement, fresh sea air and a peaceful
+environment for your body and mind.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=90" alt="Sunset walk">
+
+<div class="experience-content">
+
+<span class="experience-number">03 / REFLECTION</span>
+
+<h3>Sunset Walk</h3>
+
+<p>
+Walk beside the water as the sky changes
+color and the day slowly comes to an end.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+<br><br>
+
+
+<div class="experience-grid">
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=1000&q=90" alt="Ocean waves">
+
+<div class="experience-content">
+
+<span class="experience-number">04 / SOUND</span>
+
+<h3>Ocean Sound Therapy</h3>
+
+<p>
+Close your eyes and let the natural sounds
+of the ocean become your background music.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=90" alt="Beach walk">
+
+<div class="experience-content">
+
+<span class="experience-number">05 / NATURE</span>
+
+<h3>Mindful Beach Walk</h3>
+
+<p>
+Walk slowly, notice the sand beneath your feet
+and reconnect with the world around you.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience reveal">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=90" alt="Peaceful ocean">
+
+<div class="experience-content">
+
+<span class="experience-number">06 / ESCAPE</span>
+
+<h3>Ocean Escape</h3>
+
+<p>
+A quiet moment away from screens, schedules
+and the constant rush of everyday life.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats">
+
+<div class="stats-inner">
+
+<div class="stat reveal">
+<h3>06</h3>
+<p>Ocean Experiences</p>
+</div>
+
+<div class="stat reveal">
+<h3>∞</h3>
+<p>Moments of Calm</p>
+</div>
+
+<div class="stat reveal">
+<h3>01</h3>
+<p>Beautiful Ocean</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WELLNESS
+===================================================== -->
+
+<section class="section">
+
+<div class="wellness">
+
+<div class="wellness-image reveal">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1100&q=90" alt="Ocean wellness">
+
+</div>
+
+
+<div class="reveal">
+
+<p class="label">
+YOUR SIMPLE JOURNEY
+</p>
+
+<h2>
+Three steps.<br>
+One peaceful feeling.
+</h2>
+
+<p class="wellness-description">
+You don't need to change your whole life to find
+a little calm. Sometimes you simply need to pause.
+</p>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">01</div>
+
+<div>
+<h4>Breathe</h4>
+<p>
+Take a slow breath and allow your body to relax.
+</p>
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">02</div>
+
+<div>
+<h4>Relax</h4>
+<p>
+Listen to the waves and let your thoughts slow down.
+</p>
+</div>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">03</div>
+
+<div>
+<h4>Reconnect</h4>
+<p>
+Leave with a clearer mind and a calmer heart.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section" id="gallery">
+
+<div class="section gallery-inner">
+
+<div class="gallery-heading reveal">
+
+<p class="label">
+A GLIMPSE OF CALM
+</p>
+
+<h2>
+Life Feels Different<br>
+By The Sea
+</h2>
+
+<p>
+A collection of quiet moments, endless horizons
+and peaceful ocean views.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<img class="gallery-main reveal"
+src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=90"
+alt="Beautiful beach">
+
+
+<img class="reveal"
+src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=900&q=90"
+alt="Ocean waves">
+
+
+<img class="reveal"
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=90"
+alt="Beach sunset">
+
+
+<img class="reveal"
+src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?auto=format&fit=crop&w=900&q=90"
+alt="Tropical beach">
+
+
+<img class="reveal"
+src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=90"
+alt="Ocean nature">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote">
+
+<div class="reveal">
+
+<div class="quote-mark">“</div>
+
+<h2>
+Let the waves calm your mind
+and the horizon inspire your soul.
+</h2>
+
+<p>
+Sometimes peace is simply a place where you can breathe.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TESTIMONIALS
+===================================================== -->
+
+<section class="section testimonials">
+
+<div class="gallery-heading reveal">
+
+<p class="label">
+WORDS FROM OUR GUESTS
+</p>
+
+<h2>
+Moments They Remember
+</h2>
+
+</div>
+
+
+<div class="testimonial-grid">
+
+
+<div class="testimonial reveal">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“The sunset walk was exactly what I needed.
+For one hour I forgot about my phone, my work
+and everything else. It was incredibly peaceful.”
+</p>
+
+<div class="person">
+
+<div class="avatar">S</div>
+
+<div>
+<strong>Sarah M.</strong>
+<span>Sunset Walk</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial reveal">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“I loved how simple everything felt. The sound
+of the waves and the meditation helped me feel
+more present and relaxed.”
+</p>
+
+<div class="person">
+
+<div class="avatar">A</div>
+
+<div>
+<strong>Amelia R.</strong>
+<span>Beach Meditation</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="testimonial reveal">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Ocean Therapy gave me a beautiful reason to slow
+down. The whole experience felt calm, natural
+and beautifully designed.”
+</p>
+
+<div class="person">
+
+<div class="avatar">L</div>
+
+<div>
+<strong>Laura K.</strong>
+<span>Ocean Escape</span>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="section faq-section">
+
+<div class="faq-heading reveal">
+
+<p class="label">QUESTIONS</p>
+
+<h2>Frequently Asked</h2>
+
+</div>
+
+
+<div class="faq reveal">
+
+<button class="faq-question">
+Are the experiences beginner friendly?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. All experiences are designed to be simple,
+gentle and suitable for beginners.
+</p>
+</div>
+
+</div>
+
+
+<div class="faq reveal">
+
+<button class="faq-question">
+What should I bring?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Comfortable clothing, drinking water, sunscreen
+and an open mind. Most importantly, bring yourself
+without the pressure to rush.
+</p>
+</div>
+
+</div>
+
+
+<div class="faq reveal">
+
+<button class="faq-question">
+Can I request a private session?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. Use the booking form and select the experience
+you are interested in. You can mention that you want
+a private session in your message.
+</p>
+</div>
+
+</div>
+
+
+<div class="faq reveal">
+
+<button class="faq-question">
+How long are the sessions?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Sessions can range from around 20 to 60 minutes
+depending on the experience you choose.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     BOOKING CTA
+===================================================== -->
+
+<section class="booking-cta" id="contact">
+
+<div class="booking-cta-inner reveal">
+
+<p class="label">
+YOUR JOURNEY STARTS HERE
+</p>
+
+<h2>
+Ready to find<br>
+your calm?
+</h2>
+
+<p>
+Choose an experience, slow down and give yourself
+permission to simply breathe.
+</p>
+
+<button class="btn" onclick="openModal()">
+Book Your Experience →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-brand">
+Ocean <span>Therapy</span>
+</div>
+
+<p class="footer-text">
+Find peace. Breathe deeply. Reconnect with yourself.
+</p>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experiences">Experiences</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<p class="copyright">
+© 2026 Ocean Therapy. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+     BOOKING MODAL
+===================================================== -->
+
+<div class="modal" id="bookingModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal()">×</button>
+
+<h2>Book Your Moment</h2>
+
+<p>
+Fill in the details below and reserve your peaceful
+ocean experience.
+</p>
+
+<form id="bookingForm">
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Choose Experience</label>
+
+<select id="experienceSelect" required>
+
+<option value="">Select experience</option>
+
+<option>Beach Meditation</option>
+
+<option>Ocean Yoga</option>
+
+<option>Sunset Walk</option>
+
+<option>Ocean Sound Therapy</option>
+
+<option>Mindful Beach Walk</option>
+
+<option>Ocean Escape</option>
+
+</select>
+
+</div>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>Date</label>
+
+<input
+type="date"
+id="date"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Time</label>
+
+<select id="time" required>
+
+<option value="">Choose time</option>
+
+<option>08:00 AM</option>
+<option>10:00 AM</option>
+<option>12:00 PM</option>
+<option>03:00 PM</option>
+<option>05:00 PM</option>
+<option>07:00 PM</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea
+id="message"
+placeholder="Tell us anything you'd like us to know..."></textarea>
+
+</div>
+
+
+<button type="submit" class="btn form-submit">
+Request Booking
+</button>
+
+<div class="success" id="success">
+✓ Booking request submitted successfully!
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   NAVBAR SCROLL
+===================================================== */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 60){
+        header.classList.add("scrolled");
+    }else{
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("open");
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+
+    });
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},{
+    threshold:.12
+});
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =====================================================
+   BOOKING MODAL
+===================================================== */
+
+const modal =
+document.getElementById("bookingModal");
+
+
+function openModal(){
+
+    modal.classList.add("active");
+
+    document.body.style.overflow="hidden";
+
+}
+
+
+function closeModal(){
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow="";
+
+}
+
+
+modal.addEventListener("click", (event) => {
+
+    if(event.target === modal){
+
+        closeModal();
+
+    }
+
+});
+
+
+/* =====================================================
+   BOOKING FORM
+===================================================== */
+
+const form =
+document.getElementById("bookingForm");
+
+const success =
+document.getElementById("success");
+
+
+form.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const experience =
+    document.getElementById("experienceSelect").value;
+
+    const date =
+    document.getElementById("date").value;
+
+    const time =
+    document.getElementById("time").value;
+
+
+    if(!name || !email || !experience || !date || !time){
+
+        alert("Please complete all required fields.");
+
+        return;
+
+    }
+
+
+    success.style.display="block";
+
+
+    setTimeout(() => {
+
+        form.reset();
+
+        success.style.display="none";
+
+        closeModal();
+
+    },2500);
+
+});
+
+
+/* =====================================================
+   PREVENT PAST DATES
+===================================================== */
+
+const dateInput =
+document.getElementById("date");
+
+const today =
+new Date();
+
+const yyyy =
+today.getFullYear();
+
+const mm =
+String(today.getMonth()+1).padStart(2,"0");
+
+const dd =
+String(today.getDate()).padStart(2,"0");
+
+dateInput.min =
+`${yyyy}-${mm}-${dd}`;
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+const faqQuestions =
+document.querySelectorAll(".faq-question");
+
+
+faqQuestions.forEach(question => {
+
+    question.addEventListener("click", () => {
+
+        const answer =
+        question.nextElementSibling;
+
+        const icon =
+        question.querySelector("span");
+
+
+        document.querySelectorAll(".faq-answer")
+        .forEach(item => {
+
+            if(item !== answer){
+
+                item.style.maxHeight = null;
+
+            }
+
+        });
+
+
+        document.querySelectorAll(".faq-question span")
+        .forEach(item => {
+
+            if(item !== icon){
+
+                item.textContent = "+";
+
+            }
+
+        });
+
+
+        if(answer.style.maxHeight){
+
+            answer.style.maxHeight = null;
+
+            icon.textContent = "+";
+
+        }else{
+
+            answer.style.maxHeight =
+            answer.scrollHeight + "px";
+
+            icon.textContent = "−";
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```
+
+</body>
+</html>
